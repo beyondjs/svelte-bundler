@@ -1,0 +1,29 @@
+{
+	"name": "@beyond-js/svelte-processor",
+	"version": "1.0.0",
+	"description": "Svelte Processor for Beyond.js",
+	"main": "index.js",
+	"exports": {
+		".": "./src/index.js",
+		"./processor": "./src/processor/index.js",
+		"./packager/compiler": "./src/packager/compiler/index.js",
+		"./packager/css": "./src/packager/css/index.js",
+		"./packager/js": "./src/packager/js/index.js",
+		"./processor/dependencies": "./src/processor/dependencies/index.js",
+		"./preprocessor": "./src/extender/preprocessor/index.js"
+	},
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"keywords": [
+		"beyond",
+		"beyondjs",
+		"bridge",
+		"bundle"
+	],
+	"author": "BeyondJS",
+	"license": "MIT",
+	"dependencies": {
+		"@beyond-js/bundles-sdk": "^1.0.3"
+	}
+}
