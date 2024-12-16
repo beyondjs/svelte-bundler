@@ -1,4 +1,4 @@
-const mformat = require('beyond/mformat');
+const mformat = require('@beyond-js/mformat');
 const Processor = require('@beyond-js/bundles-sdk/processor/packager/code/singly');
 
 module.exports = class extends Processor {
