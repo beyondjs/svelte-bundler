@@ -1,0 +1,17 @@
+{
+	"name": "svelte-bundle-test",
+	"version": "0.0.1",
+	"description": "BeyondJS `Svelte Bundler / Processor` test",
+	"license": "MIT",
+	"modules": {
+		"path": "."
+	},
+	"bundlers": {
+		"svelte": "@beyond-js/svelte-bundler"
+	},
+	"devDependencies": {
+		"@beyond-js/svelte-bundler": "file://../..",
+		"beyond": "file://../../../../engine",
+		"colors": "^1.4.0"
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"name": "@beyond-js/svelte-processor",
+	"version": "1.0.0",
+	"description": "Svelte Processor for Beyond.js",
+	"main": "index.js",
+	"exports": {
+		".": "./lib/module/index.js",
+		"./processor": "./src/processor/index.js"
+	},
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"keywords": ["beyond", "beyond-js", "beyondjs", "bundler"],
+	"author": "BeyondJS",
+	"license": "MIT",
+	"dependencies": {
+		"@beyond-js/bundlers-sdk": "~1.0.10",
+		"@beyond-js/ts-bundler": "~1.0.0",
+		"svelte": "^4.2.19",
+		"uimport": "^1.2.9-beta.0"
+	}
+}
