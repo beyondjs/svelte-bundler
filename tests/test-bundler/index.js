@@ -38,6 +38,15 @@ const workspace = new Workspace(__dirname);
 				warnings?.length && console.log(`  • Processors warnings:', ${[...warnings].join(', ')}`);
 
 				const svelte = conditional.processors.get('svelte');
+				console.log('  • Svelte processor:', svelte ? 'found'.green : 'not found'.red);
+				if (svelte) {
+					await svelte.ready;
+					console.log('    • Specs:', svelte.specs.values);
+					console.log('    • Inputs:', [...svelte.sources.inputs.keys()].join(', '));
+
+					await svelte.extender.preprocessor.ready;
+					console.log('    • Extender preprocessor size:', svelte.extender.preprocessor.size);
+				}
 			} else {
 				console.log('  • No default bundler found');
 			}
