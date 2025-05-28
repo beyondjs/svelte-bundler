@@ -44,8 +44,13 @@ const workspace = new Workspace(__dirname);
 					console.log('    • Specs:', svelte.specs.values);
 					console.log('    • Inputs:', [...svelte.sources.inputs.keys()].join(', '));
 
-					await svelte.extender.preprocessor.ready;
-					console.log('    • Extender preprocessor size:', svelte.extender.preprocessor.size);
+					// await svelte.extender.preprocessor.ready;
+					// console.log('    • Extender preprocessor size:', svelte.extender.preprocessor.size);
+
+					const extension = svelte.extender.extensions.get('tsc');
+					await extension.ready;
+					console.log(extension.get('index.svelte').content);
+					console.log('    • Extension "tsc":', [...extension.keys()].join(', '));
 				}
 			} else {
 				console.log('  • No default bundler found');
